@@ -1,0 +1,26 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Artist Name</th>
+      <th>Genre</th>
+      <th>Release Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% if @songs.any? %>
+      <% for song in @songs do %>
+        <tr>
+          <td><%= song.title %></td>
+          <td><%= song.artist_name %></td>
+          <td><%= song.genre %></td>
+          <td><%= song.release_year %></td>
+        </tr>
+      <% end %>
+    <% else %>
+      <tr>
+        There are no songs stored yet.
+      </tr>
+    <% end %>
+  </tbody>
+</table>
